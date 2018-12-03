@@ -1,7 +1,7 @@
 "use strict"
 
 class Animals {
-    constructor(){
+    constructor() {
         this.num_legs = 4;
         this.has_fur = true;
         this.breed_with = 'birth';
@@ -73,5 +73,5 @@ let crocodile = new Crocodile();
 let chicken = new Chicken();
 console.log(chimpanzee.superpower.sharp_teeth());
 console.log(crocodile);
-console.log(chicken);
+console.log(frog);
 
