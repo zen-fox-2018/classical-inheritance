@@ -15,15 +15,14 @@ class Animals {
 
 class Frog extends Animals  {
     constructor() {
-     super()
+     super(2)
     }
 
   }
 
   class Chicken extends Animals  {
     constructor() {
-     super ()
-     this.legs = 2
+     super (2)
     }
 
   }
@@ -31,7 +30,7 @@ class Frog extends Animals  {
   class Fish extends Animals  {
     constructor() {
      super()
-     this.leg = 'No legs'
+     this.legs = 'No legs'
     }
 
   }
@@ -50,11 +49,11 @@ class Frog extends Animals  {
     }
 }
 
-  let fro = new Frog()
+  let froggy = new Frog()
   let chic = new Chicken()
   let Nemo = new Fish ()
-  console.log(fro);
-  console.log(fro.superPower.invisible())
+  console.log(froggy);
+  console.log(froggy.superPower.invisible())
   console.log(chic);
   console.log(chic.superPower.laser_eyes());
   console.log(Nemo);
