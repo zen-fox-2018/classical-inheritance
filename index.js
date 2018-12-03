@@ -3,6 +3,7 @@ class Animals {
     constructor(eyes, feet) {
         this.eyes = eyes;
         this.feet = feet;
+        this.superPowers = new SuperPowers
     }
 }
 
@@ -46,11 +47,35 @@ class Chicken extends Animals {
     }
 }
 
+class SuperPowers {
+    constructor() {}
+
+    be_invisible() {
+        console.log("Now you can't see me!");
+    }
+
+    secretly_a_ninja() {
+        console.log("I'm going to kill you in your sleep")
+    }
+
+    ultra_sound() {
+        console.log("Hear my wrath!")
+    }
+
+
+}
+
 let frog = new Frog(2, 4, "Amphibi", false);
+// let PowerUp = new SuperPowers()
 let bat = new Bat(2, 2, "mamals", true);
 let chimpanzee = new Chimpanzee(2, 2, "mamals", true);
 let fox = new Fox(2, 4, "mamals", true);
-console.log(frog)
-console.log(bat)
+
+chimpanzee.superPowers.be_invisible()
+fox.superPowers.secretly_a_ninja()
+
+// console.log(frog)
+// console.log(bat)
 console.log(chimpanzee)
-console.log(fox)
+// console.log(fox)
+
