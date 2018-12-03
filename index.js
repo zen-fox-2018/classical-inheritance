@@ -4,7 +4,7 @@ class Animal {
   constructor() {
     this._num_legs = 2
     this._is_warm_blooded = false
-  }
+  };
 }
 
 class Chicken extends Animal {
@@ -20,42 +20,39 @@ class Chicken extends Animal {
 class Chimpanzee extends Animal {
 }
 
-class SuperPower extends Animal {
-  get name() {
-    return this._name
-  }
-  use_laser_vision() {
-    console.log(`${this.name} use laser vision to burn its enemies!`);
+class SuperPower {
+  use_laser_vision(sound) {
+    console.log(`${sound} ,It is using laser vision to burn its enemies!`);
   }
 
-  be_invisible() {
-    console.log(`${this.name} is looking invisible now, no one can see him`)
+  be_invisible(sound) {
+    console.log(`${sound} ,It is looking invisible now, no one can see him`)
   }
 }
 
-class Frog extends SuperPower {
-  constructor(name) {
+class Frog extends Animal {
+  constructor() {
     super()
-    this._name = name
     this._num_legs = 4
+    this.superpower = new SuperPower()
   }
 }
 
-class Dog extends SuperPower {
-  constructor(name) {
+class Dog extends Animal {
+  constructor() {
     super()
-    this._name = name
     this._num_legs = 4
     this._is_warm_blooded = true
+    this.superpower = new SuperPower()
   }
 }
 
 let monyet = new Chimpanzee()
 let ayam = new Chicken()
-let kodok = new Frog('Anthony')
-let anjing = new Dog('Jacob')
+let kodok = new Frog()
+let anjing = new Dog()
 console.log(ayam);
 ayam.use_its_wing_to_fly()
-kodok.use_laser_vision()
-anjing.be_invisible()
+kodok.superpower.use_laser_vision('Pew Pew Pew')
+anjing.superpower.be_invisible('Whoosh')
 // console.log(anjing);
